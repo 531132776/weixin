@@ -1,0 +1,39 @@
+<!--pages/about/home.wxml-->
+
+<import src="../../wxParse/wxParse.wxml"/>
+
+<text>pages/about/home.wxml</text>
+
+
+<view>
+    <!-- 绑定属性 -->
+    <text data-aid="{{aid}}"></text>
+</view>
+<view>
+<!-- item变量名是默认的 -->
+    <view class='res' wx:for="{{list}}" wx:key="{{index}}">
+       {{index}}--{{item.title}}
+    </view>
+</view>
+<view>
+<!-- wx:for-index="idx"指定变量名 wx:for-item="val" -->
+    <view class='res' wx:for-index="idx" wx:for-item="val" wx:for="{{list}}" wx:key="{{index}}">
+       {{idx+1}}--{{val.title}}
+    </view>
+</view>
+<!-- wx:for-index="idx"指定变量名 wx:for-item="val" -->
+    <view class='res' wx:for-index="idx" wx:for-item="val" wx:for="{{list2}}" wx:key="{{index}}">
+       <text>{{val.title}}</text>
+       <view class="" hover-class="none" wx:key="index" hover-stop-propagation="false" wx:for="{{val.cars}}">
+           <text class="" selectable="false" space="false" decode="false">
+               {{index+1}}---{{item.name}}
+           </text>
+       </view>
+    </view>
+<!-- 引入wxParse解析html -->
+<!-- //这里data中article为bindName,这里是固定写法 -->
+<template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+
+<view>
+    <header age="{{aid}}"></header>
+</view>

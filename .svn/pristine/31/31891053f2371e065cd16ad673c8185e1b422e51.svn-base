@@ -1,0 +1,49 @@
+{
+    "pages": [
+        "pages/home/home",
+        "pages/groupPurchase/groupPurchase",
+        "pages/autoshow/autoshow",
+        "pages/disrtibutor/disrtibutor",
+        "pages/about/home",
+        "pages/autoshowDetails/autoshowDetails",
+        "pages/index/index",
+        "pages/logs/logs"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#1296DB",
+        "navigationBarTitleText": "WeChat",
+        "navigationBarTextStyle": "#fff"
+    },
+    "tabBar": {
+      "list": [
+        {
+          "pagePath": "pages/home/home",
+          "text": "首页",
+          "iconPath":"statis/image/home.png",
+          "selectedIconPath":"statis/image/home(1).png"
+        },
+        {
+          "pagePath": "pages/autoshow/autoshow",
+          "text": "车展",
+          "iconPath": "statis/image/autoshow.png",
+          "selectedIconPath": "statis/image/autoshow(1).png"
+        },
+        {
+          "pagePath": "pages/groupPurchase/groupPurchase",
+          "text": "团购",
+          "iconPath": "statis/image/groupList.png",
+          "selectedIconPath": "statis/image/groupList(1).png"
+        },
+        {
+          "pagePath": "pages/disrtibutor/disrtibutor",
+          "text": "商家",
+          "iconPath":"statis/image/distributor.png",
+          "selectedIconPath":"statis/image/distributor(1).png"
+        }
+      ],
+      "selectedColor": "#1296DB",
+      "color":"#333",
+      "borderStyle":"white"
+    }
+}

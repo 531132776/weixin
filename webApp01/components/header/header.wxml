@@ -1,0 +1,5 @@
+<!--components/header/header.wxml-->
+<view class="header">
+    {{age}}
+</view>
+<button size="mini" bindtap="run">按钮</button>

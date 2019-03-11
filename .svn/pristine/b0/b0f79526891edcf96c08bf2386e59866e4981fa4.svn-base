@@ -1,0 +1,4 @@
+<!--pages/autoshowDetails/autoshowDetails.wxml-->
+<view style='height:50vw'>
+  <image src='{{titleImage}}' class='img-responsive'/>
+</view>

@@ -1,0 +1,51 @@
+<!--pages/home/home.wxml-->
+<!-- import {imageLoad} '../lib/imageLoad.js' -->
+
+<view class='HomeHeaderBanner'>
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-dots="true" indicator-color="rgba(255,255,255,.3)" circular="true" indicator-active-color="#1296DB">
+    <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image img-responsive"/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<!-- 车品牌Logo -->
+<view>
+    <view class='item_ul'>
+        <view class='item_ul_li' wx:for="{{carLogoList}}" wx:key="{{index}}" wx:for-index="idx">
+              <!-- <navigator> -->
+                  <image src="{{item[0].logo}}" mode="widthFix" class='bannerCarImg'/>
+                  <view>{{item[0].name}}</view>
+              <!-- </navigator> -->
+        </view>
+    </view>
+</view>
+<!-- 车展 -->
+<view class='mu_divider'></view>
+<view>
+  <view class='autoshow_list'>
+      <view  class='autoshow_ul'>
+        <view class='autoshow_li p15' wx:for="{{autoshowList}}" wx:key="{{index}}" wx:for-item="i" wx:for-index="nmb" 
+        bindtap='autoshowDetails' data-item="{{i}}">
+          <view >
+            <image src="{{i.titleImage}}" mode="widthFix" bindload="imageOn" style="width:{{imgwidth}}rpx;height:{{imgheight}}rpx;" />
+          </view>
+          <view class='pt10 text_14'>
+            <view>
+              <i class="iconfont icon-weizhi" style="fontsize:20rpx;"></i>
+              {{i.address}}
+            </view>
+            <view>
+              <i class="iconfont icon-web-icon-" style="fontsize:20rpx;"></i>
+              {{i.beginTime}}--{{i.endTime}}
+            </view>
+            <view style='padding-left:4rpx'>
+              <i class="iconfont icon-dianhua1" style="fontsize:20rpx;"></i>
+              {{i.ticketCall}}
+            </view>
+          </view>
+        </view>
+      </view>
+  </view>
+</view>
